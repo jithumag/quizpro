@@ -11,7 +11,7 @@ class user_registration_form(forms.ModelForm):
         username = self.cleaned_data.get("username")
         if User.objects.filter(username=username).exists():
             raise forms.ValidationError(
-                "Customer with this username already exists.")
+                "This username already exists.")
         return username
 class UserLoginForm(forms.Form):
     username = forms.CharField(widget=forms.TextInput())

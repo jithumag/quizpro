@@ -75,7 +75,7 @@ def dash(request):
                 correct+=1
             else:
                 wrong+=1
-                score+=-2.5
+                score+=-0.25
                 
         context = {
             'score':score,
